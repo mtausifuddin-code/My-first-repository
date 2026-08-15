@@ -1,206 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dr. Mohammad Afraaz (PT) — Prayatna Physio & Rehab</title>
-  <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Prayatna Physio & Rehab — Orthopaedic, Neurological and Sports Physiotherapy in Bhubaneswar. Clinic & Home visits.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <!-- Replace with an actual logo if you add one -->
-        <h1>Prayatna Physio & Rehab</h1>
-        <p class="subtitle">Dr. Mohammad Afraaz (PT) — Orthopaedics & Sports Physiotherapy</p>
-      </div>
-      <div class="contact-quick">
-        <a class="btn small" href="tel:+918984337808">Call</a>
-        <a class="btn small whatsapp" href="https://wa.me/918984337808" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
+    <div class="container">
+        <div class="todo-app">
+            <h1>My To-Do List</h1>
+            
+            <div class="input-container">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="input-field" 
+                    placeholder="Add a new task..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">Add</button>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="todoList" class="todo-list">
+                <!-- To-do items will be added here -->
+            </ul>
+
+            <div class="todo-stats">
+                <span id="taskCount">0 tasks</span>
+                <button id="clearBtn" class="clear-btn">Clear Completed</button>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h2>Dr. Mohammad Afraaz (PT)</h2>
-          <p class="lead">Bachelor of Physiotherapy — Specialist in Orthopaedics & Sports Rehabilitation</p>
-          <ul class="quick-list">
-            <li><strong>Clinic:</strong> Prayatna physio and rehab</li>
-            <li><strong>Address:</strong> District center Chandrasekharpur, Bhubaneswar 752016</li>
-            <li><strong>Clinic hours:</strong> 10:00 AM — 5:00 PM</li>
-            <li><strong>Phone / WhatsApp:</strong> +91 8984337808</li>
-            <li><strong>Email:</strong> <a href="mailto:drafraazphysiotherapy@gmail.com">drafraazphysiotherapy@gmail.com</a></li>
-          </ul>
-
-          <div class="cta-row">
-            <a class="btn primary" href="#booking">Book Appointment</a>
-            <a class="btn" href="#services">Our Services</a>
-            <a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Prayatna+physio+and+rehab+District+center+Chandrasekharpur+Bhubaneswar" target="_blank" rel="noopener">Get Directions</a>
-          </div>
-        </div>
-
-        <div class="hero-photo">
-          <!-- Put your professional photo at images/profile.jpg -->
-          <img src="images/profile.jpg" alt="Dr Mohammad Afraaz" />
-          <div class="photo-caption">Consultant Physiotherapist — Prayatna Physiotherapy & Rehabilitation</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="container section">
-      <h3>Services</h3>
-      <div class="cards">
-        <article class="card">
-          <h4>Orthopaedic physiotherapy</h4>
-          <p>Assessment and treatment for musculoskeletal pain, post-op rehabilitation, manual therapy and exercise prescription.</p>
-        </article>
-        <article class="card">
-          <h4>Neurological physiotherapy</h4>
-          <p>Neurorehabilitation, gait training, balance & coordination training, functional recovery strategies.</p>
-        </article>
-        <article class="card">
-          <h4>Geriatric rehabilitation</h4>
-          <p>Strength, mobility and fall prevention programs tailored for older adults.</p>
-        </article>
-        <article class="card">
-          <h4>Sports rehabilitation</h4>
-          <p>Sports injury rehab, return-to-play programs, taping and conditioning.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="about" class="bg-light section">
-      <div class="container">
-        <h3>About Dr. Afraaz</h3>
-        <p>Dr. Mohammad Afraaz (PT) is a dedicated and patient-centered physiotherapist specializing in Musculoskeletal, Neurological, and Sports Rehabilitation. He holds a Bachelor of Physiotherapy (BPT) from Hitech Medical College and Hospital and serves as Consultant Physiotherapist at Prayatna Physiotherapy & Rehabilitation.</p>
-        <p>Specialized training includes Kinesio IASTM, Dry Needling, Myokinetic Chain Release, Neural Tissue Mobilisation, Craniosacral Therapy, Muscle Energy Technique, Postural & Ergonomic Assessment, Strength & Conditioning, Kinesio & Sports Taping, plus CPR/AED/First Aid certification.</p>
-      </div>
-    </section>
-
-    <section id="prices" class="container section">
-      <h3>Prices</h3>
-      <div class="price-grid">
-        <div class="price-card">
-          <h4>Clinic Visit</h4>
-          <p class="price">₹500 — ₹800</p>
-        </div>
-        <div class="price-card">
-          <h4>Home Visit</h4>
-          <p class="price">₹1000 — ₹1500</p>
-        </div>
-        <div class="price-card">
-          <h4>Online Consultation</h4>
-          <p class="price">₹500 — ₹800</p>
-        </div>
-      </div>
-      <p class="muted">Online payment accepted. For payments integrate Razorpay / Stripe. See instructions below to set up.</p>
-    </section>
-
-    <section id="home-visit" class="section bg-light">
-      <div class="container">
-        <h3>Home-visit areas</h3>
-        <p>Chandrasekharpur, Patia, Niladri Vihar, Jaydev Vihar — within a radius of 7 km from the clinic.</p>
-      </div>
-    </section>
-
-    <section id="booking" class="container section">
-      <h3>Book an appointment</h3>
-      <p>Use the form below to request an appointment. You can choose Clinic, Home Visit, or Online Consultation.</p>
-
-      <!-- Replace the action with your Formspree endpoint (recommended) or Netlify form handling -->
-      <form id="booking-form" class="form" method="POST" action="https://formspree.io/f/yourformid">
-        <label>
-          Your name
-          <input type="text" name="name" required>
-        </label>
-
-        <label>
-          Phone
-          <input type="tel" name="phone" required pattern="[\d\s+-]{7,}">
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="_replyto">
-        </label>
-
-        <label>
-          Service
-          <select name="service">
-            <option>Orthopaedic physiotherapy</option>
-            <option>Neurological physiotherapy</option>
-            <option>Geriatric rehabilitation</option>
-            <option>Sports rehabilitation</option>
-          </select>
-        </label>
-
-        <label>
-          Preferred date & time
-          <input type="text" name="preferred_time" placeholder="e.g. 2026-08-20 11:00">
-        </label>
-
-        <label>
-          Mode
-          <select name="mode">
-            <option value="clinic">Clinic</option>
-            <option value="home">Home visit</option>
-            <option value="online">Online consultation</option>
-          </select>
-        </label>
-
-        <label id="address-field" style="display:none;">
-          Home address (for home visit)
-          <input type="text" name="address" placeholder="Full address for home visit">
-        </label>
-
-        <input type="hidden" name="_subject" value="New appointment request from website">
-        <button class="btn primary" type="submit">Send request</button>
-        <button id="pay-now" class="btn outline" type="button">Pay Consultation</button>
-      </form>
-
-      <div id="form-message" class="muted" aria-live="polite" style="margin-top:1rem"></div>
-    </section>
-
-    <section id="gallery" class="section">
-      <div class="container">
-        <h3>Clinic photos</h3>
-        <div class="gallery">
-          <img src="images/clinic1.jpg" alt="Clinic photo 1">
-          <img src="images/clinic2.jpg" alt="Clinic photo 2">
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-dark section">
-      <div class="container contact-grid">
-        <div>
-          <h3>Contact</h3>
-          <p><strong>Clinic:</strong> Prayatna physio and rehab</p>
-          <p><strong>Clinic address:</strong> District center Chandrasekharpur, Bhubaneswar 752016</p>
-          <p><strong>Residential:</strong> Vyas 008, SBI Colony, Bhubaneswar 752101</p>
-          <p><strong>Phone / WhatsApp:</strong> <a href="tel:+918984337808">+91 8984337808</a></p>
-          <p><strong>Email:</strong> <a href="mailto:drafraazphysiotherapy@gmail.com">drafraazphysiotherapy@gmail.com</a></p>
-        </div>
-
-        <div>
-          <h3>Social</h3>
-          <p>Instagram: private account</p>
-          <p>Facebook / YouTube: not available</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© Prayatna Physio & Rehab — Dr. Mohammad Afraaz (PT). For appointments call/WhatsApp <a href="tel:+918984337808">+91 8984337808</a>.</p>
-      </div>
-    </footer>
-  </main>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
